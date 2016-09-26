@@ -1,4 +1,4 @@
-var selections = {}; 
+var selections = {};
 
 $(function() {
  
@@ -16,10 +16,10 @@ $(function() {
 });
 
 function buildBingo(optNew) {
-	if (getCookie('bingoSelections')) {
-		selections = JSON.parse(getCookie('bingoSelections'));
+	if (docCookies.getItem('bingoSelections')) {
+		selections = JSON.parse(docCookies.getItem('bingoSelections'));
 	}
-	if (optNew || !getCookie('bingoOptions')) {
+	if (optNew || !docCookies.getItem('bingoOptions')) {
 		var origOptions = new Array('"Emails"', '"Wall"', '"Sanctions"', '"Weapons of Mass Destruction"',
 			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"', '"Benghazi"', '"Troops"', '"Iraq"',
 			'"Crooked"', '"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
@@ -37,11 +37,11 @@ function buildBingo(optNew) {
 		bingoOptions.sort(function () {
 			return 0.5 - Math.random();
 		});
-		setCookie('bingoOptions', JSON.stringify(bingoOptions), 1);
+		docCookies.setItem('bingoOptions', JSON.stringify(bingoOptions));
 		selections = [];
-		setCookie('bingoSelections', JSON.stringify(selections), 1);
+		docCookies.setItem('bingoSelections', JSON.stringify(selections));
 	} else {
-		bingoOptions = JSON.parse(getCookie('bingoOptions'));
+		bingoOptions = JSON.parse(docCookies.getItem('bingoOptions'));
 	}
 
 	var bingoHTML = '<table class="bingo_card"><thead><tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr></thead><tbody>';
@@ -61,7 +61,6 @@ function buildBingo(optNew) {
 		}
 		bingoHTML += "</tr>";
 	}
-
 	bingoHTML += '</tbody></table>';
 
 	$('.bingo_card').remove();
@@ -82,7 +81,7 @@ function buildBingo(optNew) {
 		});
 
 		// Set cookie with selections
-		setCookie('bingoSelections', JSON.stringify(selections), 1);
+		docCookies.setItem('bingoSelections', JSON.stringify(selections));
 	});
 
 	$('td').keypress(function(e) {
@@ -93,24 +92,41 @@ function buildBingo(optNew) {
 
 }
 
-function setCookie(cname, cvalue, exdays) {
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	var expires = "expires="+ d.toUTCString();
-	document.cookie = cname + "=" + cvalue + "; " + expires;
-}
-
-function getCookie(cname) {
-	var name = cname + "=";
-	var ca = document.cookie.split(';');
-	for(var i = 0; i <ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') {
-			c = c.substring(1);
+docCookies = {
+	getItem: function (sKey) {
+		if (!sKey || !this.hasItem(sKey)) { return null; }
+		return unescape(document.cookie.replace(new RegExp("(?:^|.*;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*((?:[^;](?!;))*[^;]?).*"), "$1"));
+	},
+	/**
+	 * docCookies.setItem(sKey, sValue, vEnd, sPath, sDomain, bSecure)
+	 *
+	 * @argument sKey (String): the name of the cookie;
+	 * @argument sValue (String): the value of the cookie;
+	 * @optional argument vEnd (Number, String, Date Object or null): the max-age in seconds (e.g., 31536e3 for a year) or the
+	 *  expires date in GMTString format or in Date Object format; if not specified it will expire at the end of session;
+	 * @optional argument sPath (String or null): e.g., "/", "/mydir"; if not specified, defaults to the current path of the current document location;
+	 * @optional argument sDomain (String or null): e.g., "example.com", ".example.com" (includes all subdomains) or "subdomain.example.com"; if not
+	 * specified, defaults to the host portion of the current document location;
+	 * @optional argument bSecure (Boolean or null): cookie will be transmitted only over secure protocol as https;
+	 * @return undefined;
+	 **/
+	setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+		if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/.test(sKey)) { return; }
+		var sExpires = "";
+		if (vEnd) {
+			switch (typeof vEnd) {
+				case "number": sExpires = "; max-age=" + vEnd; break;
+				case "string": sExpires = "; expires=" + vEnd; break;
+				case "object": if (vEnd.hasOwnProperty("toGMTString")) { sExpires = "; expires=" + vEnd.toGMTString(); } break;
+			}
 		}
-		if (c.indexOf(name) == 0) {
-			return c.substring(name.length,c.length);
-		}
-	}
-	return "";
-}
+		document.cookie = escape(sKey) + "=" + escape(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+	},
+	removeItem: function (sKey) {
+		if (!sKey || !this.hasItem(sKey)) { return; }
+		var oExpDate = new Date();
+		oExpDate.setDate(oExpDate.getDate() - 1);
+		document.cookie = escape(sKey) + "=; expires=" + oExpDate.toGMTString() + "; path=/";
+	},
+	hasItem: function (sKey) { return (new RegExp("(?:^|;\\s*)" + escape(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie); }
+};
