@@ -1,4 +1,4 @@
-var selections = new Array();
+var selections = {}; 
 
 $(function() {
  
