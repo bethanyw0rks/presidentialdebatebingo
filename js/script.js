@@ -24,7 +24,8 @@ function buildBingo() {
 		'"Very Very"', '"Out of control"', '"Go after"', '"Jobs"', '"Tremendous"', '"Family"', '"Together"',
 		'"Make America Great Again"', 'Trump implies Clinton\'s health is bad', '"Supreme Court"', '"Drones"',
 		'"Air Strikes"', 'Candidate refers to themself in the third person', 'Candidate repeats self', '"Can\'t be bought"',
-		'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"');
+		'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"',
+		'"NRA"', '"First Woman President"', '"Rigged System"', '"I never said that."', '"Terrific"');
 	bingoOptions.sort(function () {
 		return 0.5 - Math.random();
 	});
