@@ -20,19 +20,29 @@ function buildBingo(optNew) {
 		selections = JSON.parse(docCookies.getItem('bingoSelections'));
 	}
 	if (optNew || !docCookies.getItem('bingoOptions')) {
-		var origOptions = new Array('"Emails"', '"Wall"', '"Sanctions"', '"Weapons of Mass Destruction"',
-			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"', '"Benghazi"', '"Troops"', '"Iraq"',
-			'"Crooked"', '"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
+		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
+			'Trump implies Clinton\'s health is bad','"Make America Great Again"',
+			'Trump drinks his water awkwardly', '"Crooked"', '"Ok?"', '"Benghazi"');
+		var clinton = new Array('"Emails"', '"Ok, folks"', '"Do everything I can"',
+			'"First Woman President"', '"Tax Returns"');
+		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
+			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"', '"Troops"', '"Iraq"',
+			'"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
 			'"Mexico"', '"Youth"', '"Police"', '"Black Live Matter"', '"Blue Lives Matter"', '"All Lives Matter"',
-			'"Illegal Immigrants"', '"Refugees"', '"Syria"', '"Police"', '"Vote"', '"Believe me"', '"Hu-uge"', '"Ok, folks"',
-			'"Planned Parenthood"', '"Affordable Healthcare"', '"Sanders"', '"We\'re going to"',  '"Do everything I can"',
-			'"Barriers"', '"Ok?"', '"Winning"', '"Free Trade"', '"Weak"', '"Loser"', '"Politically Correct"', '"Tough"',
-			'"Very Very"', '"Out of control"', '"Go after"', '"Jobs"', '"Tremendous"', '"Family"', '"Together"',
-			'"Make America Great Again"', 'Trump implies Clinton\'s health is bad', '"Supreme Court"', '"Drones"',
-			'"Air Strikes"', 'Candidate refers to themself in the third person', 'Candidate repeats self', '"Can\'t be bought"',
-			'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"',
-			'"NRA"', '"First Woman President"', '"Rigged System"', '"I never said that."', '"Terrific"', '"Oval Office"',
-			'"Take away your guns"', '"Outside the box"');
+			'"Illegal Immigrants"', '"Refugees"', '"Syria"', '"Police"', '"Vote"',
+			'"Planned Parenthood"', '"Affordable Healthcare"', '"Sanders"', '"We\'re going to"',
+			'"Barriers"', '"Winning"', '"Free Trade"', '"Weak"', '"Politically Correct"', '"Tough"',
+			'"Out of control"', '"Go after"', '"Jobs"', '"Tremendous"', '"Family"', '"Together"',
+			'"Supreme Court"', '"Drones"','"Air Strikes"', 'Candidate refers to themself in the third person',
+			'Candidate repeats self', '"Can\'t be bought"', 'Candidate doesn\'t answer question',
+			'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"',
+			'"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Oval Office"',
+			'"Take away your guns"', '"Outside the box"', '"Minimum wage"');
+		var vp = new Array('"Christian"','"Conservative"','"Unborn"', '"Religious freedom"',
+			'Candidate says something in Spanish');
+		// var origOptions = trump.concat(clinton);
+		// origOptions = origOptions.concat(other);
+		var origOptions = other.concat(vp);
 		var bingoOptions = origOptions;
 		bingoOptions.sort(function () {
 			return 0.5 - Math.random();
