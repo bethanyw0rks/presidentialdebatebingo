@@ -22,9 +22,10 @@ function buildBingo(optNew) {
 	if (optNew || !docCookies.getItem('bingoOptions')) {
 		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
 			'Trump implies Clinton\'s health is bad','"Make America Great Again"',
-			'Trump drinks his water awkwardly', '"Crooked"', '"Ok?"', '"Benghazi"');
+			'Trump drinks his water awkwardly', '"Crooked"', '"Ok?"', '"Tax Returns"',
+			'"Putin"', '"Birth Certificate"');
 		var clinton = new Array('"Emails"', '"Ok, folks"', '"Do everything I can"',
-			'"First Woman President"', '"Tax Returns"');
+			'"First Woman President"', '"Transcripts"', '"Benghazi"', '"TPP"');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
 			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"', '"Troops"', '"Iraq"',
 			'"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
@@ -33,17 +34,22 @@ function buildBingo(optNew) {
 			'"Planned Parenthood"', '"Affordable Healthcare"', '"Sanders"', '"We\'re going to"',
 			'"Barriers"', '"Winning"', '"Free Trade"', '"Weak"', '"Politically Correct"', '"Tough"',
 			'"Out of control"', '"Go after"', '"Jobs"', '"Tremendous"', '"Family"', '"Together"',
-			'"Supreme Court"', '"Drones"','"Air Strikes"', 'Candidate refers to themself in the third person',
+			'"Supreme Court"', '"Air Strikes"', 'Candidate refers to themself in the third person',
 			'Candidate repeats self', '"Can\'t be bought"', 'Candidate doesn\'t answer question',
 			'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"',
-			'"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Oval Office"',
-			'"Take away your guns"', '"Outside the box"', '"Minimum wage"');
-		var vp = new Array('"Christian"','"Conservative"','"Unborn"', '"Religious freedom"',
-			'Candidate says something in Spanish');
-		// var origOptions = trump.concat(clinton);
-		// origOptions = origOptions.concat(other);
-		var origOptions = other.concat(vp);
+			'"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Take away your guns"',
+			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', '"1%"',
+			'"Stop and frisk"', '"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"',
+			'"Maternity leave"', '"Global warming"', 'Candidate scoffs or rolls eyes');
+		var origOptions = trump.concat(clinton);
+		origOptions = origOptions.concat(other);
 		var bingoOptions = origOptions;
+
+		/* VP  Stuff*/
+		//var vp = new Array('"Christian"','"Conservative"','"Unborn"', '"Religious freedom"', 'Candidate says something in Spanish');
+		// var origOptions = other.concat(vp);
+		// var bingoOptions = origOptions;
+
 		bingoOptions.sort(function () {
 			return 0.5 - Math.random();
 		});
