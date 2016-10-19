@@ -23,24 +23,25 @@ function buildBingo(optNew) {
 		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
 			'Trump implies Clinton\'s health is bad','"Make America Great Again"',
 			'Trump drinks his water awkwardly', '"Crooked"', '"Ok?"', '"Tax Returns"',
-			'"Putin"', '"Birth Certificate"');
+			'"Putin"', '"Birth Certificate"', '"Disaster"', 'Trump sniffles', '"30 Years"', '"Locker room talk"');
 		var clinton = new Array('"Emails"', '"Ok, folks"', '"Do everything I can"',
-			'"First Woman President"', '"Transcripts"', '"Benghazi"', '"TPP"');
+			'"First Woman President"', '"Transcripts"', '"Benghazi"', '"TPP"', '"HillaryClinton.com"');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
-			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"', '"Troops"', '"Iraq"',
-			'"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
+			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
+			'"Troops"', '"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
 			'"Mexico"', '"Youth"', '"Police"', '"Black Live Matter"', '"Blue Lives Matter"', '"All Lives Matter"',
-			'"Illegal Immigrants"', '"Refugees"', '"Syria"', '"Police"', '"Vote"',
-			'"Planned Parenthood"', '"Affordable Healthcare"', '"Sanders"', '"We\'re going to"',
-			'"Barriers"', '"Winning"', '"Free Trade"', '"Weak"', '"Politically Correct"', '"Tough"',
-			'"Out of control"', '"Go after"', '"Jobs"', '"Tremendous"', '"Family"', '"Together"',
-			'"Supreme Court"', '"Air Strikes"', 'Candidate refers to themself in the third person',
-			'Candidate repeats self', '"Can\'t be bought"', 'Candidate doesn\'t answer question',
-			'Candidate talks over the other candidate', '"Gun Control"', '"Wall Street"',
-			'"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Take away your guns"',
+			'"Illegal Immigrants"', '"Refugees"', '"Syria"', '"Police"', '"Vote"', '"Planned Parenthood"',
+			'"Affordable Healthcare"', '"Sanders"', '"We\'re going to"', '"Barriers"', '"Winning"', '"Free Trade"',
+			'"Weak"', '"Politically Correct"', '"Tough"', '"Out of control"', '"Go after"', '"Jobs"',
+			'"Tremendous"', '"Family"', '"Together"', '"Supreme Court"', '"Air Strikes"',
+			'Candidate refers to themself in the third person',	'Candidate repeats self', '"Can\'t be bought"',
+			'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"',
+			'"Wall Street"', '"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Take away your guns"',
 			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', '"1%"',
-			'"Stop and frisk"', '"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"',
-			'"Maternity leave"', '"Global warming"', 'Candidate scoffs or rolls eyes');
+			'"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"', '"Maternity leave"',
+			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Wikileaks"',
+			'"Fact check"', '"Tempermant"');
+		// Other possible words: '"Stop and frisk"',
 		var origOptions = trump.concat(clinton);
 		origOptions = origOptions.concat(other);
 		var bingoOptions = origOptions;
