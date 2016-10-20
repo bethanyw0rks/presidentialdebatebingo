@@ -22,8 +22,9 @@ function buildBingo(optNew) {
 	if (optNew || !docCookies.getItem('bingoOptions')) {
 		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
 			'Trump implies Clinton\'s health is bad','"Make America Great Again"',
-			'Trump drinks his water awkwardly', '"Crooked"', '"Ok?"', '"Tax Returns"',
-			'"Putin"', '"Birth Certificate"', '"Disaster"', 'Trump sniffles', '"30 Years"', '"Locker room talk"');
+			'"Crooked"', '"Ok?"', '"Tax Returns"', '"Rigged"',
+			'"Putin"', '"Birth Certificate"', '"Disaster"', 'Trump sniffles', '"30 Years"',
+			'"Locker room talk"', '"Bigly"');
 		var clinton = new Array('"Emails"', '"Ok, folks"', '"Do everything I can"',
 			'"First Woman President"', '"Transcripts"', '"Benghazi"', '"TPP"', '"HillaryClinton.com"');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
@@ -36,11 +37,11 @@ function buildBingo(optNew) {
 			'"Tremendous"', '"Family"', '"Together"', '"Supreme Court"', '"Air Strikes"',
 			'Candidate refers to themself in the third person',	'Candidate repeats self', '"Can\'t be bought"',
 			'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"',
-			'"Wall Street"', '"NRA"', '"Rigged"', '"I never said that."', '"Terrific"', '"Take away your guns"',
+			'"Wall Street"', '"NRA"', '"I never said that."', '"Terrific"', '"Take away your guns"',
 			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', '"1%"',
 			'"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"', '"Maternity leave"',
 			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Wikileaks"',
-			'"Fact check"', '"Tempermant"');
+			'"Fact check"', '"Tempermant"', '"Citizens United"');
 		// Other possible words: '"Stop and frisk"',
 		var origOptions = trump.concat(clinton);
 		origOptions = origOptions.concat(other);
