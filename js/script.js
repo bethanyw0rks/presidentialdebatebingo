@@ -59,7 +59,7 @@ function buildBingo(optNew) {
             '"Bill Clinton"', '"Electoral Votes"', '"Stronger together"', '"historic"',
             '"Immigration"', '"Trumped-Up Trickle Down Economics"', 'American flag apparel',
             '"Build a wall"', 'Bernie Sanders', '"The American People"', 'Trump talks with his hands',
-            '"Putin"', 'Footage of long lines', 'Trump refuses to concede'
+            '"Putin"', 'Footage of long lines', 'Trump refuses to concede', '"Exit polls"'
         );
 
 		/* VP  Stuff*/
