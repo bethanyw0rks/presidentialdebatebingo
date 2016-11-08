@@ -47,7 +47,7 @@ function buildBingo(optNew) {
 		var bingoOptions = origOptions; */
 
 		var bingoOptions = new Array(
-		    'Someone Cries', '"Hillary Clinton"', '"Donald Trump"', 'Offensive Sign',
+		    'Someone cries', '"Hillary Clinton"', '"Donald Trump"', 'Offensive Sign',
             'Offensive T-Shirt', 'A tweet is quoted', 'Red "Make America Great Again" hat', 'Emails',
             'Guest dodges question', 'Mexico', 'Trump Sniffles', '"Rigged"', '"Obamacare"',
             '"Liberal Media"', '"Locker room talk"', '"Gary Johnson"', '"Jill Stein"',
@@ -59,7 +59,7 @@ function buildBingo(optNew) {
             '"Bill Clinton"', '"Electoral Votes"', '"Stronger together"', '"historic"',
             '"Immigration"', '"Trumped-Up Trickle Down Economics"', 'American flag apparel',
             '"Build a wall"', 'Bernie Sanders', '"The American People"', 'Trump talks with his hands',
-            '"Putin"'
+            '"Putin"', 'Footage of long lines', 'Trump refuses to concede'
         );
 
 		/* VP  Stuff*/
