@@ -42,10 +42,25 @@ function buildBingo(optNew) {
 			'"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"', '"Maternity leave"',
 			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Wikileaks"',
 			'"Fact check"', '"Tempermant"', '"Citizens United"');
-		// Other possible words: '"Stop and frisk"',
-		var origOptions = trump.concat(clinton);
+		/* var origOptions = trump.concat(clinton);
 		origOptions = origOptions.concat(other);
-		var bingoOptions = origOptions;
+		var bingoOptions = origOptions; */
+
+		var bingoOptions = new Array(
+		    'Someone Cries', '"Hillary Clinton"', '"Donald Trump"', 'Offensive Sign',
+            'Offensive T-Shirt', 'A tweet is quoted', 'Red "Make America Great Again" hat', 'Emails',
+            'Guest dodges question', 'Mexico', 'Trump Sniffles', '"Rigged"', '"Obamacare"',
+            '"Liberal Media"', '"Locker room talk"', '"Gary Johnson"', '"Jill Stein"',
+            'Someone criticizes 3rd party voters',  '"Make America Great Again"', '"Swing State"',
+            '"Red"', '"Blue"', '"Supreme Court"', 'News network admits mistake calling a state',
+            'Guests talk over one another', 'Wikileaks', '"Racist"', '"Tax Returns"', '"Disaster"',
+            '"Middle Class"', 'Ana Navarro', 'Anderson Cooper', '"Benghazi"', 'Rudy Guiliani',
+            '"Crooked Hillary"', '"Voter Fraud"', '"Making history"', '"First woman president"',
+            '"Bill Clinton"', '"Electoral Votes"', '"Stronger together"', '"historic"',
+            '"Immigration"', '"Trumped-Up Trickle Down Economics"', 'American flag apparel',
+            '"Build a wall"', 'Bernie Sanders', '"The American People"', 'Trump talks with his hands',
+            '"Putin"'
+        );
 
 		/* VP  Stuff*/
 		//var vp = new Array('"Christian"','"Conservative"','"Unborn"', '"Religious freedom"', 'Candidate says something in Spanish');
