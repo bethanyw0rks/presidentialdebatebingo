@@ -112,7 +112,7 @@ td { cursor: pointer; }
 		padding: 2px;
 	}
 }
-th { font-family: 'Raleway', sans-serif; height: auto; background-color: #337ab7; color: #fff; font-weight: bold; font-size: 1.5em; }
+th { width: 20%; font-family: 'Raleway', sans-serif; height: auto; background-color: #337ab7; color: #fff; font-weight: bold; font-size: 1.5em; }
 td.active, td.active:hover { background-color: #222; color: #fff; }
 td:hover { background-color: #ddd; }
 #footer {
