@@ -118,7 +118,29 @@ function buildBingo(optNew) {
 			'"NATO"', 
 			'"Terrorism"', 
 			'"ISIS"',
-			'"Let me be clear"'
+			'"Let me be clear"',
+			'Candidate clears throat',
+			'"Washington"',
+			'Sad anecdote',
+			'"Take on the NRA"',
+			'"Money out of politics"',
+			'"Electoral college"',
+			'"Pharmaceutical"',
+			'"Constitutional amendment"',
+			'"Corporate Donors"',
+			'"Distraction"',
+			'"Work together"',
+			'"Union"',
+			'"Private sector"',
+			'"White house"',
+			'"Bottom line"',
+			'"Incentives"',
+			'"Clean energy"',
+			'"Racial divide"',
+			'"Blue collar"',
+			'"Trade war"',
+			'"Tax increase"',
+			'"Choice"'
         );
 
 		/* VP  Stuff*/
