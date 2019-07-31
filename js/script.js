@@ -46,6 +46,10 @@ function buildBingo(optNew) {
 		origOptions = origOptions.concat(other);
 		var bingoOptions = origOptions; */
 
+		/*
+			'Bernie flails hands',
+		*/
+
 		var bingoOptions = new Array(
 		    'Candidate speaks spanish',
 			'"Medicare for all"', 
@@ -99,8 +103,7 @@ function buildBingo(optNew) {
 			'Rant against Wall Street',
 			'Biden gets called out',
 			'"Renewable energy"',
-			'"Up the ante"', 
-			'Bernie flails hands',
+			'"Up the ante"',
 			'"Pass the torch"',
 			'"Green new deal"',
 			'"Special interests"',
