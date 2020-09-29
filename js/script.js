@@ -22,7 +22,7 @@ function buildBingo(optNew) {
 	if (optNew || !docCookies.getItem('bingoOptions')) {
 		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
 			'"Keep America Great"', '"Crooked"', '"Ok?"', '"Tax Returns"', '"Rigged"',
-			'"Putin"', '"Disaster"', 'Trump sniffles', '"30 Years"', '"Bigly"', '"China Virus"', '"Nobel Peace Prize"');
+			'"Putin"', '"Disaster"', 'Trump sniffles', '"Bigly"', '"China Virus"', '"Nobel Peace Prize"');
 		var biden = new Array('"Obama"', '"Sleepy Joe"', 'Stutters');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
 			'"Nuclear"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
