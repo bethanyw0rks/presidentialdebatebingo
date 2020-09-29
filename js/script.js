@@ -26,7 +26,7 @@ function buildBingo(optNew) {
 		var biden = new Array('"Obama"', '"Sleepy Joe"', 'Stutters');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
 			'"Nuclear"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
-			'"Troops"', '"Middle East"', '"Israel"', '"Racist"', '"Terrorist"', 'Candidate calls out the other for lying',
+			'"Troops"', '"Middle East"', '"Israel"','"Terrorist"', 'Candidate calls out the other for lying',
 			'"Mexico"', '"Youth"', '"Police"', '"Black Live Matter"', '"Illegal Immigrants"',
 			'"Refugees"', '"Syria"', '"Police"', '"Vote"', '"Planned Parenthood"',
 			'"Affordable Healthcare"',  '"We\'re going to"', '"Barriers"', '"Winning"', '"Free Trade"',
