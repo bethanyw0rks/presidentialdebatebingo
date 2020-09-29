@@ -21,66 +21,53 @@ function buildBingo(optNew) {
 	}
 	if (optNew || !docCookies.getItem('bingoOptions')) {
 		var trump = new Array('"Wall"', '"Believe me"', '"Yuge"','"Loser"','"Very Very"',
-			'Trump implies Clinton\'s health is bad','"Make America Great Again"',
-			'"Crooked"', '"Ok?"', '"Tax Returns"', '"Rigged"',
-			'"Putin"', '"Birth Certificate"', '"Disaster"', 'Trump sniffles', '"30 Years"',
-			'"Locker room talk"', '"Bigly"');
-		var clinton = new Array('"Emails"', '"Ok, folks"', '"Do everything I can"',
-			'"First Woman President"', '"Transcripts"', '"Benghazi"', '"TPP"', '"HillaryClinton.com"');
+			'"Keep America Great"', '"Crooked"', '"Ok?"', '"Tax Returns"', '"Rigged"',
+			'"Putin"', '"Disaster"', 'Trump sniffles', '"30 Years"', '"Bigly"', '"China Virus"', '"Nobel Peace Prize"');
+		var biden = new Array('"Obama"', '"Sleepy Joe"', 'Stutters');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
-			'"Nuclear"', '"Edward Snowden"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
-			'"Troops"', '"Middle East"', '"Israel"', '"Racist"', '"9/11"', 'Candidate calls out the other for lying',
+			'"Nuclear"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
+			'"Troops"', '"Middle East"', '"Israel"', '"Racist"', '"Terrorist"', 'Candidate calls out the other for lying',
 			'"Mexico"', '"Youth"', '"Police"', '"Black Live Matter"', '"Illegal Immigrants"',
 			'"Refugees"', '"Syria"', '"Police"', '"Vote"', '"Planned Parenthood"',
-			'"Affordable Healthcare"', '"Sanders"', '"We\'re going to"', '"Barriers"', '"Winning"', '"Free Trade"',
+			'"Affordable Healthcare"',  '"We\'re going to"', '"Barriers"', '"Winning"', '"Free Trade"',
 			'"Weak"', '"Politically Correct"', '"Tough"', '"Out of control"', '"Go after"', '"Jobs"',
 			'"Tremendous"', '"Family"', '"Together"', '"Supreme Court"', '"Air Strikes"',
 			'Candidate refers to themself in the third person',	'Candidate repeats self', '"Can\'t be bought"',
 			'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"',
-			'"Wall Street"', '"NRA"', '"I never said that."', '"Terrific"', '"Take away your guns"',
+			'"Wall Street"', '"NRA"', 'Candidate denies accusation', '"Terrific"', '"Take away your guns"',
 			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', '"1%"',
 			'"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"', '"Maternity leave"',
-			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Wikileaks"',
-			'"Fact check"', '"Tempermant"', '"Citizens United"');
-		/* var origOptions = trump.concat(clinton);
+			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Fake News"', 'Candidate loses their train of thought',
+			'"Fact check"', '"Citizens United"', 'Someone says something racist', 'Candidate accuses the other of being racist', 
+			'Candidate speaks spanish',
+			'"Obamacare"', '"Melting Pot"', '"Handout"', 'Technical Difficulties', '"200,000 Dead"', 
+			'"God"',
+			'American flag pin','"Executive order"', 'Candidate mispronounces a word', '"Roe vs Wade" ','"Hyde Amendment"',
+			'"Everything I/we can"', '"Quick break"', 'Question from audience', '"Identity Politics"', '"Bottom Line"', '"Distraction"', 
+			'"USPS"', '"Trade War"'
+			);
+		
+		var origOptions = trump.concat(biden);
 		origOptions = origOptions.concat(other);
-		var bingoOptions = origOptions; */
-
-		/*
-			'Bernie flails hands',
-		*/
-
-		var bingoOptions = new Array(
-		    'Candidate speaks spanish',
+		var bingoOptions = origOptions; 
+		
+		/* 
+			'Candidate speaks spanish',
 			'"Medicare for all"', 
-			'"Obamacare"', 
-			'"Minimum wage"',  
-			'Candidates talk over one another', 
 			'"Undocumented"',
-			'"Melting pot"', 
-			'Candidate doesn’t answer question',
 			'"Handout"',
 			'"Pathway to citizenship"',
 			'"Moral fabric"',
 			'"Comprehensive"', 
-			'Technical difficulties', 
 			'"Asylum"',
-			'"Separation of church and state"',
-			'"God"',
-			'American flag pin',
-			'"Middle class"', 
-			'"Executive order"', 
+			'"Separation of church and state"',			
 			'Candidate doesn’t hear the question',
 			'"China"',
 			'"Public option"',
 			'Audience cheers disruptively', 
-			'Candidate mispronounces a word', 
 			'Candidate repeats self',
-			'"Can\'t be bought"',
-			'"Rhetoric"',
 			'"Common sense"',
 			'Criticism of Trump',
-			'"Black lives matter"', 
 			'"Institutional Racism"', 
 			'"Diversity"',
 			'Candidate brings up their race',
@@ -92,11 +79,8 @@ function buildBingo(optNew) {
 			'"Bush tax cuts"',
 			'"Parkland"',
 			'"Koch Brothers"', 
-			'"Roe vs Wade" ',
-			'"Supreme Court"', 
 			'"Right to choose"', 
 			'"Everything we can"', 
-			'"Hyde Amendment"',
 			'"Climate crisis"', 
 			'Mention of natural disasters', 
 			'"Top 1%"',
@@ -112,7 +96,6 @@ function buildBingo(optNew) {
 			'"Quick break"', 
 			'"Gun show loophole"', 
 			'Candidate scoffs or rolls eyes', 
-			'Question from audience',
 			'"Free college"',
 			'"Minimum wage"',
 			'"Pissed off"',
@@ -144,7 +127,8 @@ function buildBingo(optNew) {
 			'"Trade war"',
 			'"Tax increase"',
 			'"Choice"'
-        );
+		*/ 
+		
 
 		/* VP  Stuff*/
 		//var vp = new Array('"Christian"','"Conservative"','"Unborn"', '"Religious freedom"', 'Candidate says something in Spanish');
