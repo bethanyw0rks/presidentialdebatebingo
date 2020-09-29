@@ -41,7 +41,7 @@ function buildBingo(optNew) {
 			'"Fact check"', '"Citizens United"', 'Someone says something racist', 'Candidate accuses the other of being racist', 
 			'Candidate speaks spanish',
 			'"Obamacare"', '"Melting Pot"', '"Handout"', 'Technical Difficulties', '"200,000 Dead"', 
-			'"God"',
+			'"God"', 'Someone adjusts a face mask', '"CDC"',
 			'American flag pin','"Executive order"', 'Candidate mispronounces a word', '"Roe vs Wade" ','"Hyde Amendment"',
 			'"Everything I/we can"', '"Quick break"', 'Question from audience', '"Identity Politics"', '"Bottom Line"', '"Distraction"', 
 			'"USPS"', '"Trade War"'
