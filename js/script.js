@@ -25,26 +25,26 @@ function buildBingo(optNew) {
 			'"Putin"', '"Disaster"', 'Trump sniffles', '"Bigly"', '"China Virus"', '"Nobel Peace Prize"');
 		var biden = new Array('"Obama"', '"Sleepy Joe"', 'Stutters');
 		var other = new Array( '"Sanctions"', '"Weapons of Mass Destruction"',
-			'"Nuclear"', '"Reagan"', '"Freedom"', '"Israel"', '"Russia"', '"China"',
+			'"Nuclear"', '"Reagan"', '"Freedom"', 'Disparaging a city', '"Russia"', '"China"',
 			'"Troops"', '"Middle East"', '"Israel"','"Terrorist"', 'Candidate calls out the other for lying',
 			'"Mexico"', '"Youth"', '"Police"', '"Black Live Matter"', '"Illegal Immigrants"',
 			'"Refugees"', '"Syria"', '"Police"', '"Vote"', '"Planned Parenthood"',
 			'"Affordable Healthcare"',  '"We\'re going to"', '"Barriers"', '"Winning"', '"Free Trade"',
 			'"Weak"', '"Politically Correct"', '"Tough"', '"Out of control"', '"Go after"', '"Jobs"',
-			'"Tremendous"', '"Family"', '"Together"', '"Supreme Court"', '"Air Strikes"',
+			'"Tremendous"', '"Family"', '"Together"', '"Supreme Court"', 
 			'Candidate refers to themself in the third person',	'Candidate repeats self', '"Can\'t be bought"',
 			'Candidate doesn\'t answer question', 'Candidate talks over the other candidate', '"Gun Control"',
 			'"Wall Street"', '"NRA"', 'Candidate denies accusation', '"Terrific"', '"Take away your guns"',
-			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', '"1%"',
+			'"Outside the box"', '"Minimum wage"', '"Trickle down economics"', 
 			'"Middle Class"', '"Rhetoric"', '"Common sense"', '"Equal pay"', '"Maternity leave"',
 			'"Global warming"', 'Candidate scoffs or rolls eyes', '"NAFTA"', '"Gun show loophole"', '"Fake News"', 'Candidate loses their train of thought',
 			'"Fact check"', '"Citizens United"', 'Someone says something racist', 'Candidate accuses the other of being racist', 
 			'Candidate speaks spanish',
 			'"Obamacare"', '"Melting Pot"', '"Handout"', 'Technical Difficulties', '"200,000 Dead"', 
-			'"God"', 'Someone adjusts a face mask', '"CDC"',
+			'"God"', '"CDC"', '"Hillary Clinton"',
 			'American flag pin','"Executive order"', 'Candidate mispronounces a word', '"Roe vs Wade" ','"Hyde Amendment"',
 			'"Everything I/we can"', '"Quick break"', 'Question from audience', '"Identity Politics"', '"Bottom Line"', '"Distraction"', 
-			'"USPS"', '"Trade War"'
+			'"Post Office"', '"Trade War"', '"Mail-In Voting"'
 			);
 		
 		var origOptions = trump.concat(biden);
